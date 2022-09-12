@@ -19,6 +19,9 @@ app.use('/profiles', profileRouter);
 app.use('/links', linkRouter);
 
 // Setup mongoose mongodb connection
+mongoose
+  .connect(config.mongoUri)
+  .then(() => console.log('Connected to MongoDB'));
 
 const port = config.port;
 

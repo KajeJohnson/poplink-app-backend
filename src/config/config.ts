@@ -4,5 +4,5 @@ dotenv.config();
 
 export const config = {
   mongoUri: process.env.MONGO_URI as string,
-  port: process.env.PORT as string,
+  port: process.env.PORT || 8000,
 };
